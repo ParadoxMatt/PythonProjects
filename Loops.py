@@ -1,9 +1,6 @@
 import random 
 
-
-
 #while Loops will run as a condition remains true/false 
-
 #Name prompt
 name = input("Enter your name: ")
 while name == "":
@@ -34,7 +31,6 @@ while play.lower() != "n":
         score += 1
         print(f"Hello "+name+" your score is "+str(score))
         play = input("Guess the Number!\nPress Y to play and N to stop: ")
-        score = 0
 
 
     
