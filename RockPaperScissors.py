@@ -2,51 +2,51 @@ import random
 
 #List of tools to use during the game
 tool_list = ["rock","paper", "scissors",]
-comp_tool = random.choice(tool_list)
+userInput = input("Press N to quit, press Y to play: ")
 
-comp_tool = comp_tool.capitalize
-userInput = input(f"Press N to quit, press Y to play: ")
+if userInput == "y":
+    print("Pick a tool to use! or press 'Q' to quit")
+    usertool = input("1. Rock \n2. Paper \n3. Scissors\n ")
 
-while userInput.lower() == "n":
-        print("Please enter Y or N")
-        userInput = input("Press N to quit, press Y to play: ")
+    while usertool.upper() != "Q":
+        pctool = random.choice(tool_list)
+        print(pctool)
+        if usertool == "1":
+            print("You picked rock")
+            if pctool == "rock":
+                print("You have drawn")
+            elif pctool == "paper":
+                print("Youve lost")
+            else:
+                print("WiN")
+            break
 
-print(" 1. Rock \n 2. Paper \n 3.Scissors")
-user_tool = input("Choose your weapon: ")
-while user_tool == "n":
-    print("Thanks for playing")
-    break
-#Rock ending       
-if user_tool == 1:
-                print("You picked Rock")
-                print("I picked "+ comp_tool)
-                if comp_tool.lower == "rock":
-                    print("It's a Draw!")
-                elif comp_tool.lower == "paper":
-                    print("You Lose!")
-                else:
-                    print("You Win!")
+        if usertool == "2":
+            print("You picked paper")
+            if pctool == "paper":
+                print("You have drawn")
+            elif pctool == "scissors":
+                print("Youve lost")
+            else:
+                print("WiN")
+            break
 
-#Paper ending
-if user_tool == 2:
-                print("You picked Paper")
-                print("I picked "+ comp_tool)
-                if comp_tool.lower == "paper":
-                    print("It's a Draw!")
-                elif comp_tool.lower == "scissors":
-                    print("You Lose")
-                else:
-                    print("You Win")
+        if usertool == "3":
+            print("You picked scissors")
+            if pctool == "scissors":
+                print("You have drawn")
+            elif pctool == "rock":
+                print("Youve lost")
+            else:
+                print("WiN")
+            break
 
-#Scissors ending
-if user_tool == 3:
-                print("You picked Paper")
-                print("I picked "+ comp_tool)
-                if comp_tool.lower == "scissors":
-                    print("It's a Draw!")
-                elif comp_tool.lower == "rock":
-                    print("You Lose")
-                else:
-                    print("You Win")
-                
+    print("Pick a tool to use! or press 'Q' to quit")
+    usertool = input("1. Rock \n2. Paper \n3. Scissors\n ")
 
+    userInput = input("Press N to quit, press Y to play: ")
+
+elif userInput != "n":
+     print("Please enter a valid letter")
+else:
+    print("Thanks for playing!")
