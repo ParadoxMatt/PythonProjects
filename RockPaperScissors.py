@@ -1,9 +1,4 @@
-import random 
-global score 
-
-
-# 1. make score variable accessible in the roshambo function
-# 2. 
+import random
 
 weaponwheel = ("Rock","Paper", "Scissors")
 score = 0
@@ -48,8 +43,6 @@ def roshambo(user_weapon, opp_weapon):
         print("YOU WIN!")
         win_var = True
         return win_var 
-
-print(win_var)
 
 def score():
     score = 0
