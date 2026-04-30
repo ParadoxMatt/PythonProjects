@@ -1,8 +1,6 @@
-import random
+import random 
 
 weaponwheel = ("Rock","Paper", "Scissors")
-score = 0
-win_var = False
 
 def tutorial():
     print("Hello, Welcome to rock, paper, scissors, shoot!")
@@ -27,28 +25,32 @@ def play():
         
 
 def roshambo(user_weapon, opp_weapon):
-    #Basic game mechanics using non global attributes from the play mechanic
+
     print(f"You picked: {user_weapon}")
     print(f"Opponent picked: {opp_weapon}")
 
     if user_weapon == opp_weapon:
         print("It is a tie draw again!")
+        win_var=False
     elif user_weapon == "Rock" and opp_weapon =="Paper":
         print("YOU LOSE!")
+        win_var=False
     elif user_weapon == "Scissors" and opp_weapon =="Rock":
         print("YOU LOSE!")
+        win_var=False
     elif user_weapon == "Paper" and opp_weapon =="Scissors":
         print("YOU LOSE!")
+        win_var=False
     else:
         print("YOU WIN!")
         win_var = True
-        return win_var 
-
+        
+    return win_var
+ 
 def score():
     score = 0
-    if win_var == True:
+    if roshambo() == True:
         score += 1
-        return score 
-
+    return score
 
 play()

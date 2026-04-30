@@ -4,7 +4,6 @@ shoppin system:
 2. Make a reciept generator to make every sale unique
 3. idk I'll make it up as I go
 """
-
 import mysql.connector
 
 dbconnect = mysql.connector.connect(
@@ -12,9 +11,7 @@ dbconnect = mysql.connector.connect(
     user="chiha",
     password="",
 )
-
 query = dbconnect.cursor()
-
 query.execute("CREATE DATABASE python_store ")
 
 def choice():

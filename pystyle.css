@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+}
+
+#navbar {
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    border-bottom: 5px solid rgb(35, 94, 197);
+    display: flex;
+}
+
+#navlinks {
+    align-self: right;
+    justify-self: flex-end;
+    list-style-type: none;
+    font-size: medium;
+    padding: 10px;
+}
+
+#navlinks li{
+    background-color: rgb(255, 255, 255);
+    display: inline;
+    padding: 5px;
+    margin:5px 12px 10px -1px;
+    transition: all 300ms;
+}
+
+#navlinks li:hover{
+    background-color: rgb(200, 200, 200);
+    padding: 15px;
+    transition: all 300ms;
+    border-bottom: 5px solid rgb(35, 94, 197);
+}
+
+#navlinks li a{
+    text-decoration: none;
+    color: black;
+
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+}
+
+#drklabel{
+    margin: 10px 20px 10px 20px;
+}
+
+/* Theme Switch */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 5em;
+    height: 2.8em;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2a2a2a;
+    transition: 0.4s;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 20px;
+    left: 0.5em;
+    bottom: 0.5em;
+    transition: 0.4s;
+    transition-timing-function: cubic-bezier(0.81, -0.04, 0.38, 1.5);
+    box-shadow: inset 8px -4px 0px 0px #fff;
+}
+
+.switch input:checked+.slider {
+    background-color: #00a6ff;
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(1.8em);
+    box-shadow: inset 15px -4px 0px 15px #ffcf48;
+}
+
+.star {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    width: 5px;
+    transition: all 0.4s;
+    height: 5px;
+}
+
+.star_1 {
+    left: 2.5em;
+    top: 0.5em;
+}
+
+.star_2 {
+    left: 2.2em;
+    top: 1.2em;
+}
+
+.star_3 {
+    left: 3em;
+    top: 0.9em;
+}
+
+.switch input:checked~.slider .star {
+    opacity: 0;
+}
+
+.cloud {
+    width: 3.5em;
+    position: absolute;
+    bottom: -1.4em;
+    left: -1.1em;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.switch input:checked~.slider .cloud {
+    opacity: 1;
+}
+
+
+
+/*DARK MODE */
+
+body.darkmode{
+    background-color: black;
+    color: white;
+}
+
+#navbar.darkmode{
+    background-color: rgb(54, 54, 54);
+    height: 100px;
+    border-bottom: 5px solid rgb(35, 94, 197);
+    display: flex;
+}
+
+#navlinks li.darkmode{
+    background-color: rgb(53, 53, 53);
+    display: inline;
+    padding: 5px;
+    margin:5px 0px 10px 15px;
+    transition: all 300ms;
+}
+
+.navlink.darkmode li:hover{
+    background-color: rgb(53, 53, 53);
+    padding: 15px;
+    transition: all 300ms;
+    border-bottom: 5px solid rgb(35, 94, 197);
+}
+
+#link1.darkmode {
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
